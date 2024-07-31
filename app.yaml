@@ -1,0 +1,16 @@
+runtime: python38  # Specifies the Python runtime version; Python 3.8 in this case
+
+instance_class: F1  # Specifies the instance class; F1 is the smallest and cheapest
+
+env_variables:
+  MYSQL_USER: 'root'  # Replace with your MySQL username
+  MYSQL_PASSWORD: 'Rupa#2411'  # Replace with your MySQL password
+  MYSQL_DB: 'todo'  # The name of your MySQL database
+  MYSQL_HOST: 'http://127.0.0.1/'  # Replace with your MySQL instance IP address or connection name
+
+handlers:
+  - url: /script  # URL pattern to handle requests to /script
+    static_dir: static/script  # Directory serving static files for /script URL
+
+  - url: /styles  # URL pattern to handle requests to /styles
+    static_dir: static/styles  # Directory serving static files for /styles URL
